@@ -4,7 +4,7 @@ info:
   description: A plugin that allows the user to search for products on eBay.
   version: 'v1'
 servers:
-  - url: https://lzs37t-8000.csb.app/.well-known/ai-plugin.json
+  - url: https://lzs37t-8000.csb.app/
 paths:
   /search:
     get:
@@ -50,36 +50,6 @@ paths:
         - name: top_rated_seller
           in: query
           description: Whether to only include products from top-rated sellers
-          schema:
-            type: boolean
-        - name: seller
-          in: query
-          description: The seller's eBay user ID
-          schema:
-            type: string
-        - name: payment_method
-          in: query
-          description: The accepted payment methods
-          schema:
-            type: string
-        - name: expedited_shipping
-          in: query
-          description: Whether to include products that offer expedited shipping
-          schema:
-            type: boolean
-        - name: max_handling_time
-          in: query
-          description: The maximum handling time (in days) specified by the seller
-          schema:
-            type: integer
-        - name: best_offer_only
-          in: query
-          description: Whether to include products that accept Best Offers
-          schema:
-            type: boolean
-        - name: charity_only
-          in: query
-          description: Whether to include products that are listed by charitable organizations
           schema:
             type: boolean
       responses:
