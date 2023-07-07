@@ -4,7 +4,7 @@ info:
   description: A plugin that allows the user to search for products on eBay.
   version: 'v1'
 servers:
-  - url: https://lzs37t-8000.csb.app/
+  - url: https://lzs37t-8000.csb.app/.well-known/ai-plugin.json
 paths:
   /search:
     get:
