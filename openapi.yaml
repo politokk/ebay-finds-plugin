@@ -1,0 +1,118 @@
+openapi: 3.0.1
+info:
+  title: eBay Search Plugin
+  description: A plugin that allows the user to search for products on eBay.
+  version: 'v1'
+servers:
+  - url: https://lzs37t-8000.csb.app/
+paths:
+  /search:
+    get:
+      operationId: search
+      summary: Search for products on eBay
+      parameters:
+        - name: query
+          in: query
+          description: The search query
+          required: true
+          schema:
+            type: string
+        - name: color
+          in: query
+          description: The color of the product
+          schema:
+            type: string
+        - name: size
+          in: query
+          description: The size of the product
+          schema:
+            type: string
+        - name: brand
+          in: query
+          description: The brand of the product
+          schema:
+            type: string
+        - name: max_price
+          in: query
+          description: The maximum price of the product
+          schema:
+            type: number
+        - name: entries_per_page
+          in: query
+          description: The number of entries per page
+          schema:
+            type: integer
+        - name: page_number
+          in: query
+          description: The page number
+          schema:
+            type: integer
+        - name: top_rated_seller
+          in: query
+          description: Whether to only include products from top-rated sellers
+          schema:
+            type: boolean
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    itemId:
+                      type: string
+                      description: The ID of the product
+                    title:
+                      type: string
+                      description: The title of the product
+                    globalId:
+                      type: string
+                      description: The global ID of the product
+                    primaryCategory:
+                      type: object
+                      description: The primary category of the product
+                    galleryURL:
+                      type: string
+                      description: The URL of the product image
+                    viewItemURL:
+                      type: string
+                      description: The URL of the product listing
+                    paymentMethod:
+                      type: string
+                      description: The payment method for the product
+                    autoPay:
+                      type: string
+                      description: Whether auto pay is enabled for the product
+                    postalCode:
+                      type: string
+                      description: The postal code of the product
+                    location:
+                      type: string
+                      description: The location of the product
+                    country:
+                      type: string
+                      description: The country of the product
+                    shippingInfo:
+                      type: object
+                      description: The shipping information for the product
+                    sellingStatus:
+                      type: object
+                      description: The selling status of the product
+                    listingInfo:
+                      type: object
+                      description: The listing information for the product
+                    returnsAccepted:
+                      type: string
+                      description: Whether returns are accepted for the product
+                    condition:
+                      type: object
+                      description: The condition of the product
+                    isMultiVariationListing:
+                      type: string
+                      description: Whether the product is a multi-variation listing
+                    topRatedListing:
+                      type: string
+                      description: Whether the product is a top-rated listing
