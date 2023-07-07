@@ -1,7 +1,7 @@
 {
     "schema_version": "v1",
-    "name_for_human": "eBay Search",
-    "name_for_model": "ebay",
+    "name_for_human": "eBay Finds",
+    "name_for_model": "ebayfinds",
     "description_for_human": "Find any eBay product you need.",
     "description_for_model": "Help the user with searching for products on eBay. You can ask to search for specific eBay products.",
     "auth": {
@@ -9,9 +9,9 @@
     },
     "api": {
         "type": "openapi",
-        "url": "https://lzs37t-8000.csb.app/openapi.json"
+        "url": "https://politokk.github.io/ebay-finds-plugin/openapi.yaml"
     },
-    "logo_url": "https://lzs37t-8000.csb.app/logo.png",
-    "contact_email": "support@example.com",
-    "legal_info_url": "http://www.example.com/legal"
+    "logo_url": "https://politokk.github.io/ebay-finds-plugin/logo.png",
+    "contact_email": "aitoolbot@gmail.com",
+    "legal_info_url": "https://politokk.github.io/ebay-finds-plugin/legal"
 }
