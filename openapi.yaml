@@ -116,3 +116,4 @@ paths:
                     topRatedListing:
                       type: string
                       description: Whether the product is a top-rated listing
+                      
